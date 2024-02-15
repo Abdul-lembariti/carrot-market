@@ -2,16 +2,16 @@ import type { NextPage } from 'next'
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-slate-400 py-20  px-20 grid  min-h-screen shadow-2xl flex-col space-y-5 ">
-      <div className="bg-white p-7 rounded-2xl sm:bg-red-400 md:bg-teal-400 lg:bg-indigo-400 xl:bg-zinc-500">
-        <span className="font-bold text-3xl">Select Item</span>
+    <div className="bg-slate-400 xl:place-content-center py-20  px-20 grid  min-h-screen shadow-2xl flex-col space-y-5  gap-10 lg:grid-cols-2 xl:grid-cols-3 ">
+      <div className="bg-white dark:bg-black flex flex-col justify-between p-7 rounded-2xl">
+        <span className="font-bold text-3xl dark:text-white">Select Item</span>
         <ul>
           {[1, 2].map((i) => (
-            <div
-              key={i}
-              className="flex justify-between my-2 odd:bg-blue-400 even:bg-yellow-400">
-              <span className="text-gray-500">Gray Chair</span>
-              <span className="font-bold">$4</span>
+            <div key={i} className="flex justify-between my-2">
+              <span className="text-gray-500 dark:text-gray-100">
+                Gray Chair
+              </span>
+              <span className="font-bold dark:text-white-100">$4</span>
             </div>
           ))}
         </ul>
@@ -19,12 +19,12 @@ const Home: NextPage = () => {
           <span>Total</span>
           <span className="font-bold">$7</span>
         </div>
-        <button className="mt-5 bg-blue-500 text-white p-3 text-center rounded-xl w-10/12 mx-auto hover:bg-teal-500 hover:text-black active:bg-yellow-500 focus:text-white">
+        <button className="mt-5 dark:border-white dark:bg-black dark:border-2px bg-blue-500 text-white p-3 text-center rounded-xl w-10/12 mx-auto dark:hover:bg-teal-500 hover:text-black active:bg-yellow-500 focus:text-white">
           CheckOut
         </button>
       </div>
       <div className="bg-white overflow-hidden rounded-2xl shadow-2xl group">
-        <div className="bg-blue-500 p-6 pb-14">
+        <div className="bg-blue-500 landscape:bg-teal-500 p-6 pb-14 xl:pb-52">
           <span className="text-white text-2xl">profile</span>
         </div>
         <div className="rounded-3xl p-6 relative -top-5 bg-white">
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white p-10 rounded-2xl shadow-2xl">
+      <div className="bg-white p-10 rounded-2xl shadow-2xl lg:col-span-2 xl:col-span-1">
         <div className="flex mb-5 justify-between items-center">
           <span>⬅️</span>
           <div className="space-x-3">
